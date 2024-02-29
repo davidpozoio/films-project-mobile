@@ -5,13 +5,14 @@ import { ScrollView } from 'react-native-gesture-handler';
 import { useMutation, useQuery, useQueryClient } from 'react-query';
 import { YStack, H2, Separator, Theme, View, Button, Spinner } from 'tamagui';
 
-import CardElement from '~/components/card';
+import CardElement from '../components/card';
 import ModalMenu, { ModalMenuOnSubmit } from '~/components/modal-menu';
 import CACHE_KEYS from '~/const/cache-keys';
 import { OverviewScreenNavigationProps } from '~/model/global-model';
-import { themeStyles } from '~/navigation';
+
 import { createFilm, deleteFilmById, getAllFilms, patchFilm } from '~/services/film-service';
 import useAppStore from '../store/store';
+import { themeStyles } from '~/environment/config';
 
 export default function TabOneScreen() {
   const navigator = useNavigation<OverviewScreenNavigationProps>();

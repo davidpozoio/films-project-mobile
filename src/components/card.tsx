@@ -1,8 +1,7 @@
 import { Button, Card, H2, Paragraph } from 'tamagui';
 import ModalMenu, { TypeMode } from './modal-menu';
 import { StyleSheet } from 'react-native';
-import { themeStyles } from '~/navigation';
-
+import { themeStyles } from '../environment/config';
 interface CardProps {
   id: number;
   title: string;

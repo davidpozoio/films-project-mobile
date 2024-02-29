@@ -1,11 +1,11 @@
 import { useNavigation } from '@react-navigation/native';
 import { Button, H1, ScrollView, Theme, YStack, Image } from 'tamagui';
 import { OverviewScreenNavigationProps } from '~/model/global-model';
-import { themeStyles } from '~/navigation';
 
 import FilmImage from '../../assets/film.png';
 
 import { StyleSheet } from 'react-native';
+import { themeStyles } from '~/environment/config';
 
 const Start = () => {
   const navigator = useNavigation<OverviewScreenNavigationProps>();

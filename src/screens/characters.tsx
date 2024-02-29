@@ -2,7 +2,6 @@ import { useNavigation } from '@react-navigation/native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { useMutation, useQueryClient } from 'react-query';
 import { H2, Separator, Theme, YStack } from 'tamagui';
-import AlertMessage from '../components/alert-message';
 
 import CardElement from '~/components/card';
 import ModalMenu from '~/components/modal-menu';
@@ -10,7 +9,7 @@ import { OverviewScreenNavigationProps } from '~/model/global-model';
 import { createCharacter, deleteCharacterById, patchCharacter } from '~/services/character-service';
 import useAppStore from '~/store/store';
 import { Alert } from 'react-native';
-import { themeStyles } from '~/navigation';
+import { themeStyles } from '~/environment/config';
 
 const Characters = () => {
   const currentCharacters = useAppStore((state) => state.currentCharacters);

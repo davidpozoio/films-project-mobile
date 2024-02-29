@@ -3,7 +3,9 @@ import { environment } from '~/environment/config';
 import { FilmContent, FilmGetResponse } from '~/model/film-model';
 
 export function getAllFilms() {
-  return axios.get<FilmGetResponse[]>(`${environment.HOST_BACKEND}/films`);
+  return axios.get<FilmGetResponse[]>(`${environment.HOST_BACKEND}/films`).then((res) => {
+    return res;
+  });
 }
 
 export function deleteFilmById(id: number) {

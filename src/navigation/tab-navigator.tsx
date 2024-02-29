@@ -3,9 +3,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { StackScreenProps } from '@react-navigation/stack';
 import { Pressable, StyleSheet } from 'react-native';
 
-import { RootStackParamList, themeStyles } from '.';
 import One from '../screens/one';
-import Two from '../screens/two';
+import { RootStackParamList, themeStyles } from '~/environment/config';
 
 const Tab = createBottomTabNavigator();
 

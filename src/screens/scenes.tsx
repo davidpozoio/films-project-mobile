@@ -5,8 +5,9 @@ import { useMutation, useQueryClient } from 'react-query';
 import { H2, Separator, Theme, YStack } from 'tamagui';
 import CardElement from '~/components/card';
 import ModalMenu from '~/components/modal-menu';
+import { themeStyles } from '~/environment/config';
 import { OverviewScreenNavigationProps } from '~/model/global-model';
-import { themeStyles } from '~/navigation';
+
 import { createScene, deleteSceneById, patchScene } from '~/services/scene-service';
 import useAppStore from '~/store/store';
 
