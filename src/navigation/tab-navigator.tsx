@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { StackScreenProps } from '@react-navigation/stack';
 import { Pressable, StyleSheet } from 'react-native';
 
-import { RootStackParamList } from '.';
+import { RootStackParamList, themeStyles } from '.';
 import One from '../screens/one';
 import Two from '../screens/two';
 
@@ -28,9 +28,9 @@ export default function TabLayout({ navigation }: Props) {
         name="One"
         component={One}
         options={{
-          title: 'Tab One',
+          headerStyle: themeStyles.container,
+          title: 'Films',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-
           headerRight: () => (
             <Pressable onPress={() => navigation.navigate('Modal')}>
               {({ pressed }) => (
@@ -43,14 +43,8 @@ export default function TabLayout({ navigation }: Props) {
               )}
             </Pressable>
           ),
-        }}
-      />
-      <Tab.Screen
-        name="Two"
-        component={Two}
-        options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarShowLabel: false,
+          tabBarStyle: themeStyles.container,
         }}
       />
     </Tab.Navigator>
