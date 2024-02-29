@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 export const environment = {
-  HOST_BACKEND: 'http://192.168.18.40:8082',
+  HOST_BACKEND: 'https://films-project-production.up.railway.app',
 };
 
 export type RootStackParamList = {
